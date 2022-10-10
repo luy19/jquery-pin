@@ -1,0 +1,72 @@
+{
+  "name": "jquery-pin",
+  "version": "2.0.0",
+  "description": "JQueryPin is a plugin to pin any element within a container",
+  "keywords": [
+    "pin",
+    "sticky"
+  ],
+  
+  "type": "module",
+  "main": "./dist/jquery-pin.cjs.js",
+  "module": "./dist/jquery-pin.esm.js",
+  "browser": "./dist/jquery-pin.umd.js",
+  "types": "./dist/main.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/jquery-pin.cjs.js",
+      "import": "./dist/jquery-pin.esm.js",
+      "default": "./dist/jquery-pin.esm.js",
+      "browser": "./dist/jquery-pin.umd.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "dev": "rollup -c config/rollup.config.dev.js -w",
+    "build": "rollup -c config/rollup.config.prod.js",
+    "check": "package-check",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@rollup/plugin-babel": "^6.0.0",
+    "@rollup/plugin-commonjs": "^23.0.0",
+    "@rollup/plugin-node-resolve": "^14.1.0",
+    "@rollup/plugin-typescript": "^8.5.0",
+    "@skypack/package-check": "^0.2.2",
+    "@types/jquery": "^3.5.14",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "eslint": "^8.25.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-eslint2": "^1.0.2",
+    "rollup-plugin-live-server": "^2.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.0",
+    "typescript": "~4.8.4"
+  },
+  "peerDependencies": {
+    "jquery": "^3.6.1"
+  },
+  "dependencies": {
+    "jquery": "^3.6.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luy19/jquery-pin.git"
+  },
+  "author": "luy19",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/luy19/jquery-pin/issues"
+  },
+  "homepage": "https://github.com/luy19/jquery-pin#readme"
+}
