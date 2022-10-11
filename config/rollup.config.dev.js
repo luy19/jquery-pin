@@ -52,8 +52,7 @@ export default {
       root: 'public',
       file: 'index.html',
       mount: [
-        ['/static', './dist'],
-        ['/static', './node_modules/jquery/dist'],
+        ['/', './dist'],
       ],
       open: false,
       wait: 500,

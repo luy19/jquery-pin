@@ -22,4 +22,4 @@ That's it - go pin all the things!
 
 ## Examples
 
-Plenty of examples [Here](http://luy19.github.com/jquery-pin/).
+Plenty of examples [Here](https://luy19.github.io/jquery-pin/).
