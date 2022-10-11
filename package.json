@@ -1,5 +1,5 @@
 {
-  "name": "jquery-pin",
+  "name": "@luy19/jquery-pin",
   "version": "2.0.0",
   "description": "JQueryPin is a plugin to pin any element within a container",
   "keywords": [
@@ -70,5 +70,8 @@
   "bugs": {
     "url": "https://github.com/luy19/jquery-pin/issues"
   },
-  "homepage": "https://github.com/luy19/jquery-pin#readme"
+  "homepage": "https://github.com/luy19/jquery-pin#readme",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
 }
