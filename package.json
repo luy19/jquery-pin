@@ -26,8 +26,11 @@
   "scripts": {
     "dev": "rollup -c config/rollup.config.dev.js -w",
     "build": "rollup -c config/rollup.config.prod.js",
-    "deploy": "gh-pages -d dist",
+    "predeploy": "rollup -c config/rollup.config.dep.js",
+    "deploy": "pnpm run predeploy && gh-pages -d dist",
     "check": "package-check",
+    "tsc": "tsc --noEmit -p ./src/tsconfig.json",
+    "lint": "eslint -c ./src/.eslintrc src",
     "prepublishOnly": "pnpm run build"
   },
   "devDependencies": {
