@@ -1,8 +1,10 @@
-## JQueryPin
+## jQueryPin
 
-Ever wanted to **pin** something to the side of a text? Ever needed a subtle sticky element to quietly hang around as you scroll down?
+![jquery-pin](https://img.shields.io/github/package-json/v/luy19/jquery-pin)
 
-**JqueryPin** is here to help! Pin any element to the top of a container. Easily **disable** it for smaller screen-sizes where there's no room for that kind of shenanigans.
+> Ever wanted to **pin** something to the side of a text? Ever needed a subtle sticky element to quietly hang around as you scroll down?
+
+**jQueryPin** is here to help! Pin any element to the top of a container. Easily **disable** it for smaller screen-sizes where there's no room for that kind of shenanigans.
 
 ## Usage
 

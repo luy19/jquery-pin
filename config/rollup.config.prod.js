@@ -1,37 +1,5 @@
-import typescript from '@rollup/plugin-typescript';
-import { babel } from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
-import del from 'rollup-plugin-delete';
-import pkg from '../package.json';
+import merge from 'rollup-merge-config';
+import commonConfig from './rollup.config.common.js';
+import { outputConfig, minify, deleteDist } from './rollup.config.parts.js';
 
-export default {
-  input: 'src/main.ts',
-  output: [
-    {
-      file: pkg.browser,
-      format: 'umd',
-      name: 'JQueryPin',
-      globals: {
-        jquery: '$',
-      },
-    },
-    {
-      file: pkg.main,
-      format: 'cjs',
-    },
-    {
-      file: pkg.module,
-      format: 'es',
-    },
-  ],
-  external: ['jquery'],
-  plugins: [
-    typescript({ noForceEmit: true, tsconfig: './src/tsconfig.json' }),
-    babel({
-      babelHelpers: 'bundled',
-      exclude: 'node_modules/**',
-    }),
-    terser(),
-    del({ targets: 'dist/*' }),
-  ],
-};
+export default merge(commonConfig, outputConfig, minify(), deleteDist());
